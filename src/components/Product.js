@@ -9,7 +9,7 @@ export default class Product extends Component {
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
           <ProductConsumer>
-            {value => {
+            {(value) => {
               return (
                 <div
                   className="img-container p-5"
@@ -55,6 +55,10 @@ const ProductWrapper = styled.div`
   .card {
     border-color: transparent;
     transition: all 1s linear;
+    -ms-flex: 25%;
+    flex: 25%;
+    height: 100%;
+    padding: 0 4px;
   }
   .card-footer {
     background: transparent;
@@ -70,15 +74,24 @@ const ProductWrapper = styled.div`
       background: rgba(247, 247, 247);
     }
   }
+
   .img-container {
     position: relative;
     overflow: hidden;
+    -ms-flex: 25%;
+    flex: 25%;
+    height: 100%;
+    padding: 0 4px;
   }
   .card-img-top {
     transition: all 1s linear;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
   }
   .img-container:hover .card-img-top {
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
   .cart-btn {
     position: absolute;

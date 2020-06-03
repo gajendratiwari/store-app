@@ -6,7 +6,7 @@ export default class Details extends Component {
   render() {
     return (
       <ProductConsumer>
-        {value => {
+        {(value) => {
           const {
             id,
             company,
@@ -14,7 +14,7 @@ export default class Details extends Component {
             info,
             price,
             title,
-            inCart
+            inCart,
           } = value.detailProduct;
 
           return (
